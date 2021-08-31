@@ -1,0 +1,1025 @@
+@import url("https://fonts.googleapis.com/css?family=Allerta&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Allerta';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+* input[type="button"] {
+  cursor: pointer;
+}
+
+* textarea {
+  resize: vertical;
+  overflow: auto;
+  text-transform: initial;
+}
+
+* a {
+  text-decoration: none;
+  color: #9e0404;
+}
+
+* ul {
+  list-style-type: none;
+}
+
+@-webkit-keyframes ulasci {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes ulasci {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes lentry {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 40px;
+  }
+}
+
+@keyframes lentry {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 40px;
+  }
+}
+
+@-webkit-keyframes entry {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 40px;
+  }
+}
+
+@keyframes entry {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 40px;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#goreIvica {
+  position: fixed;
+  background-color: #f7f7f7;
+  z-index: 5;
+  height: 40px;
+  -webkit-animation: entry;
+          animation: entry;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  width: 100%;
+  top: 0;
+}
+
+#desnoIvica {
+  position: fixed;
+  background-color: #f7f7f7;
+  z-index: 5;
+  width: 40px;
+  height: 100%;
+  -webkit-animation: lentry;
+          animation: lentry;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  right: 0;
+}
+
+#desnoIvica ul {
+  text-align: center;
+  margin-top: 45vh;
+  font-size: 100%;
+}
+
+#desnoIvica ul li {
+  margin-bottom: 50%;
+}
+
+#doleIvica {
+  position: fixed;
+  background-color: #f7f7f7;
+  z-index: 5;
+  height: 40px;
+  -webkit-animation: entry;
+          animation: entry;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  width: 100%;
+  bottom: 0;
+}
+
+#levoIvica {
+  position: fixed;
+  background-color: #f7f7f7;
+  z-index: 5;
+  width: 40px;
+  -webkit-animation: lentry;
+          animation: lentry;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  height: 100%;
+  left: 0;
+}
+
+#omotac {
+  margin: 40px;
+  position: relative;
+  z-index: 4;
+}
+
+#omotac #meni {
+  position: absolute;
+  padding: 2%;
+  text-transform: uppercase;
+  width: 100%;
+  top: 0px;
+  z-index: 3;
+  height: 100px;
+  -webkit-animation: fadein;
+          animation: fadein;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#omotac #meni .linkoviMenija {
+  font-size: 35px;
+}
+
+#omotac #slajder {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#omotac #slajder #naslov {
+  -webkit-animation: fadein;
+          animation: fadein;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  left: 35%;
+  text-transform: uppercase;
+}
+
+#omotac #slajder #naslov h2 {
+  font-size: 3.5vw;
+  margin-bottom: 10%;
+}
+
+#omotac #slajder #naslov span:first-child {
+  position: absolute;
+  color: rgba(247, 247, 247, 0.3);
+  font-size: 6vw;
+  margin-left: 15%;
+  margin-top: -5%;
+}
+
+#omotac #slajder #naslov span:not(:first-child) {
+  margin-left: -20%;
+  border-top: 2px solid #9e0404;
+}
+
+#omotac #slajder #naslov span:not(:first-child) a {
+  color: #fff;
+}
+
+#omotac #slajder > a {
+  margin-left: -3%;
+  position: absolute;
+  bottom: 2%;
+  font-size: 1vw;
+}
+
+#omotac #slajder > a span:first-child {
+  display: block;
+  font-size: 3vw;
+}
+
+#omotac #sadrzaj {
+  text-transform: uppercase;
+}
+
+#omotac #sadrzaj h3 {
+  margin: 20px 0px;
+}
+
+#omotac #sadrzaj #uvod {
+  text-align: center;
+  padding: 10%;
+}
+
+#omotac #sadrzaj #uvod img {
+  height: 100%;
+  margin-bottom: 2%;
+}
+
+#omotac #sadrzaj #uvod p {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+#omotac #sadrzaj #uvod span {
+  display: block;
+  height: 2px;
+  background-color: #000;
+  width: 40px;
+  margin: 20px;
+  margin-left: 50%;
+}
+
+#omotac #sadrzaj #desavanja .desavanje span:first-child {
+  position: absolute;
+  color: rgba(158, 4, 4, 0.5);
+  margin-top: -1%;
+  font-size: 3vw;
+  z-index: -5;
+}
+
+#omotac #sadrzaj #desavanja .desavanje span:not(:first-child) {
+  display: block;
+  height: 2px;
+  background-color: #000;
+  width: 40px;
+  margin: 20px;
+  margin: 20px;
+}
+
+#omotac #sadrzaj #desavanja .desavanje .fleksuj p:last-of-type {
+  text-transform: initial;
+}
+
+#omotac #sadrzaj .desavanje, #omotac #sadrzaj .deO, #omotac #sadrzaj #kontaktiranje {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj, #omotac #sadrzaj .deO .fleksuj, #omotac #sadrzaj #kontaktiranje .fleksuj {
+  width: 50%;
+  min-height: 400px;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj h3, #omotac #sadrzaj .deO .fleksuj h3, #omotac #sadrzaj #kontaktiranje .fleksuj h3 {
+  margin: 30px;
+  font-size: 2vw;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj p, #omotac #sadrzaj .deO .fleksuj p, #omotac #sadrzaj #kontaktiranje .fleksuj p {
+  margin: 25px;
+  font-size: 1vw;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj img, #omotac #sadrzaj .deO .fleksuj img, #omotac #sadrzaj #kontaktiranje .fleksuj img {
+  width: 100%;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj .ulogovan, #omotac #sadrzaj .deO .fleksuj .ulogovan, #omotac #sadrzaj #kontaktiranje .fleksuj .ulogovan {
+  padding: 5%;
+}
+
+#omotac #sadrzaj .desavanje:nth-of-type(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#omotac #sadrzaj .deO:first-child {
+  background-color: #f7f7f7;
+  padding: 5% 0%;
+}
+
+#omotac #sadrzaj .deO:first-child h3 {
+  text-align: center;
+}
+
+#omotac #sadrzaj .deO:first-child .fleksuj img {
+  width: 50%;
+  margin-left: 25%;
+}
+
+#omotac #sadrzaj .deO:first-child p {
+  padding: 10%;
+  text-transform: initial;
+}
+
+#omotac #sadrzaj .deO h3 {
+  margin: 5% 0%;
+  font-size: 2vw;
+}
+
+#omotac #sadrzaj .deO .deO3 .fleksuj {
+  margin-bottom: 0%;
+}
+
+#omotac #sadrzaj .deO .deO3 .fleksuj figure {
+  height: 350px;
+}
+
+#omotac #sadrzaj .desavanje .fleksuj h3 {
+  margin-top: 10%;
+}
+
+#omotac #sadrzaj figure {
+  overflow: hidden;
+  position: relative;
+}
+
+#omotac #sadrzaj figure img {
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+}
+
+#omotac #sadrzaj figure:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#omotac #sadrzaj figure > p {
+  color: #9e0404;
+  position: absolute;
+  top: -3%;
+  right: 3%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+#omotac #sadrzaj #pretraga {
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#omotac #sadrzaj #pretraga input[type=text], #omotac #sadrzaj #pretraga select {
+  margin: 5% 0%;
+  width: 100%;
+  text-transform: initial;
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid #000;
+}
+
+#omotac #sadrzaj #pretraga select option {
+  color: #9e0404;
+}
+
+#omotac #sadrzaj #pretraga #naslovKat {
+  font-size: 2vw;
+}
+
+#omotac #sadrzaj .deO3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+#omotac #sadrzaj .deO3 img {
+  width: 100%;
+}
+
+#omotac #sadrzaj .deO3 input {
+  margin: 10px 0px;
+  padding: 10px 20px;
+}
+
+#omotac #sadrzaj .deO3 .fleksuj {
+  margin-bottom: 5%;
+  width: 30%;
+  text-align: left;
+}
+
+#omotac #sadrzaj .deO3 .fleksuj figure img {
+  height: 100%;
+}
+
+#omotac #sadrzaj .deO3 .fleksuj p {
+  margin: 20px 0px;
+}
+
+#omotac #sadrzaj .deO3 .fleksuj .info {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#omotac #sadrzaj #centralizovano {
+  text-align: center;
+  margin: auto 10%;
+}
+
+#omotac #sadrzaj #centralizovano .fleksuj {
+  padding: 5%;
+  min-height: 250px;
+}
+
+#omotac #sadrzaj #centralizovano .fleksuj p {
+  padding: 0%;
+}
+
+#omotac #sadrzaj #centralizovano .fleksuj i {
+  font-size: 2vw;
+}
+
+#omotac #sadrzaj #kontaktiranje {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 500px;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 10%;
+}
+
+#omotac #sadrzaj #kontaktiranje input[type=button] {
+  margin-top: 5%;
+  padding: 0% 5%;
+  text-transform: initial;
+  height: 30px;
+  border: 0px;
+}
+
+#omotac #sadrzaj #kontaktiranje textarea {
+  width: 70%;
+  border: 0px;
+  border-bottom: 2px solid #000;
+}
+
+#omotac #sadrzaj #kontaktiranje #forma {
+  margin-top: 50px;
+  line-height: 40px;
+}
+
+#omotac #sadrzaj #kontaktiranje #forma input[type=text] {
+  margin: 5% 0%;
+  width: 50%;
+  text-transform: initial;
+  height: 50px;
+  border: 0px;
+  border-bottom: 2px solid #000;
+}
+
+#omotac #crnMeni {
+  background-color: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  position: fixed;
+  top: 40px;
+  bottom: 40px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+}
+
+#omotac #crnMeni h2 {
+  margin: 5%;
+}
+
+#omotac #crnMeni h2 a {
+  color: #9e0404;
+  font-size: 2vmax;
+}
+
+#omotac #crnMeni ul {
+  margin: 15% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#omotac #crnMeni ul li span {
+  visibility: hidden;
+  font-size: 4vmax;
+  position: absolute;
+  margin: -1.5% 0% 0% 2%;
+  color: #aaa;
+  z-index: -5;
+}
+
+#omotac #crnMeni ul li:hover span {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+}
+
+#omotac #crnMeni ul a {
+  color: #9e0404;
+  font-size: 2vmax;
+}
+
+#modal, #listaFiltera, #autor {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal #modal-sadrzaj, #modal #listaFiltera-sadrzaj, #modal #autor-sadrzaj, #listaFiltera #modal-sadrzaj, #listaFiltera #listaFiltera-sadrzaj, #listaFiltera #autor-sadrzaj, #autor #modal-sadrzaj, #autor #listaFiltera-sadrzaj, #autor #autor-sadrzaj {
+  text-align: center;
+  background-color: rgba(254, 254, 254, 0.1);
+  border: 1px solid #888;
+  width: 100%;
+  height: 100%;
+}
+
+#modal #modal-sadrzaj #listaKategorija, #modal #listaFiltera-sadrzaj #listaKategorija, #modal #autor-sadrzaj #listaKategorija, #listaFiltera #modal-sadrzaj #listaKategorija, #listaFiltera #listaFiltera-sadrzaj #listaKategorija, #listaFiltera #autor-sadrzaj #listaKategorija, #autor #modal-sadrzaj #listaKategorija, #autor #listaFiltera-sadrzaj #listaKategorija, #autor #autor-sadrzaj #listaKategorija {
+  margin-top: 5%;
+  font-size: 1.5vw;
+}
+
+#modal #modal-sadrzaj #listaKategorija li, #modal #listaFiltera-sadrzaj #listaKategorija li, #modal #autor-sadrzaj #listaKategorija li, #listaFiltera #modal-sadrzaj #listaKategorija li, #listaFiltera #listaFiltera-sadrzaj #listaKategorija li, #listaFiltera #autor-sadrzaj #listaKategorija li, #autor #modal-sadrzaj #listaKategorija li, #autor #listaFiltera-sadrzaj #listaKategorija li, #autor #autor-sadrzaj #listaKategorija li {
+  height: 100%;
+  padding: 2% 0%;
+}
+
+#modal #modal-sadrzaj #listaKategorija li:hover, #modal #listaFiltera-sadrzaj #listaKategorija li:hover, #modal #autor-sadrzaj #listaKategorija li:hover, #listaFiltera #modal-sadrzaj #listaKategorija li:hover, #listaFiltera #listaFiltera-sadrzaj #listaKategorija li:hover, #listaFiltera #autor-sadrzaj #listaKategorija li:hover, #autor #modal-sadrzaj #listaKategorija li:hover, #autor #listaFiltera-sadrzaj #listaKategorija li:hover, #autor #autor-sadrzaj #listaKategorija li:hover {
+  background-color: rgba(254, 254, 254, 0.5);
+}
+
+#modal #modal-sadrzaj p, #modal #listaFiltera-sadrzaj p, #modal #autor-sadrzaj p, #listaFiltera #modal-sadrzaj p, #listaFiltera #listaFiltera-sadrzaj p, #listaFiltera #autor-sadrzaj p, #autor #modal-sadrzaj p, #autor #listaFiltera-sadrzaj p, #autor #autor-sadrzaj p {
+  margin-top: 20%;
+  font-size: 45px;
+}
+
+#modal #zatvori, #modal #zatvoriFilter, #modal #zatvoriAutora, #listaFiltera #zatvori, #listaFiltera #zatvoriFilter, #listaFiltera #zatvoriAutora, #autor #zatvori, #autor #zatvoriFilter, #autor #zatvoriAutora {
+  color: #9e0404;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+#modal #zatvori:hover, #modal #zatvori:focus, #modal #zatvoriFilter:hover, #modal #zatvoriFilter:focus, #modal #zatvoriAutora:hover, #modal #zatvoriAutora:focus, #listaFiltera #zatvori:hover, #listaFiltera #zatvori:focus, #listaFiltera #zatvoriFilter:hover, #listaFiltera #zatvoriFilter:focus, #listaFiltera #zatvoriAutora:hover, #listaFiltera #zatvoriAutora:focus, #autor #zatvori:hover, #autor #zatvori:focus, #autor #zatvoriFilter:hover, #autor #zatvoriFilter:focus, #autor #zatvoriAutora:hover, #autor #zatvoriAutora:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#autor {
+  background-color: rgba(0, 0, 0, 0.95);
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  width: auto;
+  height: auto;
+}
+
+#autor #autor-sadrzaj p {
+  font-size: 100% !important;
+  margin: 30% 10% 0% 10%;
+  color: #aaa;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 2%;
+}
+
+#autor #autor-sadrzaj img {
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: -2;
+}
+
+.fiksiranFuter, .fiksiranMeni {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  background-color: #f7f7f7;
+  z-index: 5;
+  -webkit-animation: ulasci;
+          animation: ulasci;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  width: 100%;
+  height: 40px;
+  z-index: 7;
+}
+
+.fiksiranFuter #drustvene-mreze, .fiksiranMeni #drustvene-mreze {
+  width: 10%;
+  padding-top: 5px;
+}
+
+.fiksiranFuter #drustvene-mreze ul, .fiksiranMeni #drustvene-mreze ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.fiksiranMeni {
+  top: 0;
+}
+
+.fiksiranFuter {
+  bottom: 0;
+  padding-top: 5px;
+}
+
+.sakriven {
+  display: none;
+}
+
+#dobrodoslica {
+  font-size: 100%;
+}
+
+@media (max-width: 1300px) {
+  #uvod img {
+    width: 100%;
+  }
+  #uvod p {
+    font-size: 1.5vh !important;
+  }
+  #kontaktiranje .fleksuj {
+    margin-top: 5% !important;
+  }
+  #kontaktiranje .ulogovan {
+    font-size: 1.5vw !important;
+  }
+  #autor #autor-sadrzaj img {
+    width: 50% !important;
+    left: 25% !important;
+  }
+  #autor #autor-sadrzaj p {
+    margin: 5% !important;
+    margin-top: 50% !important;
+    font-size: 90% !important;
+  }
+  .desavanje .fleksuj {
+    min-height: 200px !important;
+  }
+  .desavanje .fleksuj img {
+    margin-top: 5% !important;
+  }
+  .desavanje .fleksuj p {
+    font-size: 1.3vmin !important;
+  }
+  #listaKategorija {
+    margin-top: 15% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #centralizovano {
+    margin: 5% !important;
+  }
+  #drustvene-mreze {
+    width: 20% !important;
+  }
+  #listaKategorija {
+    margin-top: 25% !important;
+    font-size: 2vh !important;
+  }
+  #autor #autor-sadrzaj img {
+    width: 100% !important;
+    left: 0% !important;
+  }
+  #autor #autor-sadrzaj p {
+    margin: 0% !important;
+    margin-top: 100% !important;
+    font-size: 80% !important;
+  }
+  .desavanje .fleksuj, .deO3 .fleksuj, .deO .fleksuj, #kontaktiranje .fleksuj {
+    width: 100% !important;
+    min-height: 200px !important;
+    margin-bottom: 5%;
+  }
+  .desavanje .fleksuj figure, .deO3 .fleksuj figure, .deO .fleksuj figure, #kontaktiranje .fleksuj figure {
+    margin: 0% auto !important;
+    width: 80% !important;
+  }
+  .desavanje .fleksuj .info, .deO3 .fleksuj .info, .deO .fleksuj .info, #kontaktiranje .fleksuj .info {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  .desavanje .fleksuj h3, .deO3 .fleksuj h3, .deO .fleksuj h3, #kontaktiranje .fleksuj h3 {
+    margin: 2% !important;
+  }
+  .desavanje .fleksuj p, .deO3 .fleksuj p, .deO .fleksuj p, #kontaktiranje .fleksuj p {
+    font-size: 1em !important;
+  }
+  .desavanje .fleksuj img, .deO3 .fleksuj img, .deO .fleksuj img, #kontaktiranje .fleksuj img {
+    min-height: 200px;
+  }
+  #kontaktiranje .fleksuj {
+    margin-top: 15% !important;
+  }
+  #kontaktiranje .ulogovan {
+    font-size: 1.5vh !important;
+    margin: 10% 0% !important;
+  }
+  #desavanja .desavanje span:first-child {
+    position: absolute;
+    color: rgba(158, 4, 4, 0.5);
+    margin-top: -2% !important;
+    margin-left: 0% !important;
+    font-size: 2.5vh !important;
+    z-index: -5;
+  }
+  #desavanja .desavanje .fleksuj h3 {
+    text-align: center !important;
+  }
+  .desavanje .fleksuj h3 {
+    font-size: 2vh !important;
+  }
+  .desavanje .fleksuj span {
+    width: 30% !important;
+  }
+  .desavanje .fleksuj p {
+    font-size: 1.5vh !important;
+  }
+  #slajder > a {
+    font-size: 1vh !important;
+  }
+  #slajder > a span:first-child {
+    font-size: 2vh !important;
+  }
+  #crnMeni a {
+    font-size: 3vh !important;
+  }
+  #crnMeni ul li {
+    display: block !important;
+    width: 100% !important;
+    margin: 10% auto;
+  }
+  #crnMeni ul li span {
+    margin: -1.5% 10% !important;
+  }
+  .fiksiranMeni h1 {
+    font-size: 2vh !important;
+  }
+  #pretraga #pretrazivanje, #pretraga #naslovKat, #pretraga #sortiranje {
+    text-align: center;
+    width: 100%;
+    margin: 1% auto;
+  }
+  #pretraga #pretrazivanje input, #pretraga #pretrazivanje select, #pretraga #naslovKat input, #pretraga #naslovKat select, #pretraga #sortiranje input, #pretraga #sortiranje select {
+    width: 100%;
+  }
+  #pretraga #naslovKat {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    font-size: 2vh !important;
+  }
+  #slajder {
+    background-position: center center !important;
+    height: 50vh !important;
+  }
+}
+
+@media (max-width: 600px) {
+  @-webkit-keyframes lentry {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 10px;
+    }
+  }
+  @keyframes lentry {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 10px;
+    }
+  }
+  @-webkit-keyframes entry {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 10px;
+    }
+  }
+  @keyframes entry {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 10px;
+    }
+  }
+  #omotac {
+    margin: 10px;
+    overflow: hidden;
+  }
+  #omotac #uvod p {
+    font-size: 100% !important;
+  }
+  #omotac #uvod span {
+    width: 10% !important;
+  }
+  #omotac #slajder {
+    min-height: calc(100vh - 20px) !important;
+  }
+  #omotac #slajder #naslov {
+    left: 15% !important;
+  }
+  #omotac #slajder #naslov h2 {
+    font-size: 200% !important;
+  }
+  #omotac #slajder #naslov h2 span {
+    font-size: 150% !important;
+  }
+  #omotac #slajder > a {
+    margin-left: -15% !important;
+    font-size: 100% !important;
+  }
+  #omotac #slajder > a i {
+    font-size: 150% !important;
+  }
+  #omotac #desavanja .desavanje .fleksuj h3 {
+    font-size: 150% !important;
+  }
+  #omotac #desavanja .desavanje .fleksuj h3 span {
+    margin-top: -5% !important;
+    margin-left: 5% !important;
+    font-size: 200% !important;
+  }
+  #omotac #desavanja .desavanje .fleksuj p {
+    font-size: 100% !important;
+  }
+  #omotac #desavanja .desavanje .fleksuj figure {
+    width: 100% !important;
+  }
+  #modal-sadrzaj p {
+    margin-top: 50% !important;
+  }
+  .nemaGa {
+    display: none !important;
+  }
+  .linkoviMenija {
+    display: block;
+    font-size: 150% !important;
+  }
+  #logo {
+    font-size: 80% !important;
+  }
+  #dobrodoslica {
+    display: none;
+  }
+  .fiksiranFuter {
+    display: none;
+  }
+  .fiksiranMeni {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0% 5%;
+  }
+  .fiksiranMeni h1 {
+    font-size: 150% !important;
+    margin-top: 2% !important;
+  }
+  .deO h3 {
+    font-size: 150% !important;
+    margin: 30% 0% !important;
+  }
+  .deO .deO3 .fleksuj {
+    text-align: center !important;
+  }
+  .deO i {
+    font-size: 150% !important;
+  }
+  #goreIvica, #doleIvica {
+    height: 10px;
+  }
+  #listaKategorija {
+    font-size: 150% !important;
+  }
+  #crnMeni {
+    top: 0px !important;
+    padding-top: 40px !important;
+  }
+  #crnMeni ul li span {
+    margin-left: 7% !important;
+  }
+  #desnoIvica, #levoIvica {
+    width: 10px;
+  }
+  #desnoIvica ul, #levoIvica ul {
+    display: none;
+  }
+  .fiksiranMeni, .fiksiranFuter {
+    text-align: center;
+  }
+  #drustvene-mreze, #izlogovanje + p {
+    display: none;
+  }
+  #pretraga + div .fleksuj {
+    text-align: center !important;
+  }
+  #forma {
+    line-height: 60px !important;
+  }
+  input[type="text"] {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

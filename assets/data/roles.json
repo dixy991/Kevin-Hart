@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "icon":"film",
+        "name":"Actor",
+        "desc":"Kevin Hart exploded onto the scene as one of the most versatile comedic actors in both television and film; and he’s making history."
+    },
+    {
+        "id":2,
+        "icon":"smile-o",
+        "name":"Comedian",
+        "desc":"Kevin has smashed records as the highest-grossing touring comedian in history. Catch him now on is current ‘What Now?’ Tour."
+    },
+    {
+        "id":3,
+        "icon":"briefcase",
+        "name":"Entrepreneur",
+        "desc":"Hart has taken matters into his own hands with the launch of his full-service production house, HartBeat Productions."
+    },
+    {
+        "id":4,
+        "icon":"child",
+        "name":"Father",
+        "desc":"With so many hats, Kevin’s most treasured role is that of loving and devoted Dad to children, Heaven & Hendrix Hart."
+    }
+]

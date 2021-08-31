@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "godina": "2016",
+        "naslov": "What now",
+        "kategorija": "Theatrical stand up",
+        "tekst": "Kevin Hart’s What Now? tour, has become the highest grossing comedy tour ever reported to Billboard Boxscore, selling more than 600,000 tickets and grossing $35 million in less than one month.",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event1.jpg"
+        }
+    },
+    {
+        "id": 2,
+        "godina": "2015",
+        "naslov": "Kevin Hart presents: Lil Rel",
+        "kategorija": "TV stand up",
+        "tekst": "The comedy special, dubbed “Relevant,” will consist of material from two shows. It is presented by star comedian Kevin Hart; “Relevant” is expected to be the third “Kevin Hart presents” special to air on Comedy Central. (Source: Chicago Tribune)",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event2.jpg"
+        }
+    },
+    {
+        "id": 3,
+        "godina": "2015",
+        "naslov": "Kevin Hart presents: Plastic cup boyz",
+        "kategorija": "TV stand up",
+        "tekst": "Kevin Hart’s What Now? tour, has become the highest grossing comedy tour ever reported to Billboard Boxscore, selling more than 600,000 tickets and grossing $35 million in less than one month.",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event3.jpg"
+        }
+    },
+    {
+        "id": 4,
+        "godina": "2013",
+        "naslov": "Kevin Hart presents: Keith Robinson",
+        "kategorija": "TV stand up",
+        "tekst": "Kevin Hart’s What Now? tour, has become the highest grossing comedy tour ever reported to Billboard Boxscore, selling more than 600,000 tickets and grossing $35 million in less than one month.",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event4.jpg"
+        }
+    },
+    {
+        "id": 5,
+        "godina": "2012",
+        "naslov": "Real husbands of Hollywood",
+        "kategorija": "TV show",
+        "tekst": "Kevin Hart’s What Now? tour, has become the highest grossing comedy tour ever reported to Billboard Boxscore, selling more than 600,000 tickets and grossing $35 million in less than one month.",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event5.jpg"
+        }
+    },
+    {
+        "id": 6,
+        "godina": "2011",
+        "naslov": "Let me explain",
+        "kategorija": "Theatrical stand up",
+        "tekst": "Kevin Hart’s What Now? tour, has become the highest grossing comedy tour ever reported to Billboard Boxscore, selling more than 600,000 tickets and grossing $35 million in less than one month.",
+        "slika": {
+            "alt": "Kevin H.",
+            "src": "assets/images/event6.jpg"
+        }
+    }
+]

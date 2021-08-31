@@ -1,0 +1,43 @@
+[
+    {
+        "id":1,
+        "name":"Behind the scenes"
+    },
+    {
+        "id":2,
+        "name":"Photography"
+    },
+    {
+        "id":3,
+        "name":"Sports"
+    },
+    {
+        "id":4,
+        "name":"Cover"
+    },
+    {
+        "id":5,
+        "name":"Editorial"
+    },
+    {
+        "id":6,
+        "name":"Fashion"
+    },
+    {
+        "id":7,
+        "name":"Health"
+    },
+    {
+        "id":8,
+        "name":"Interview"
+    },
+    {
+        "id":9,
+        "name":"Motion"
+    },
+    {
+        "id":10,
+        "name":"News"
+    }
+
+]

@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Allerta';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    input[type="button"]{
+        cursor: pointer;
+    }
+    textarea{
+        resize:vertical;
+        overflow:auto;  
+        text-transform: initial;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(158, 4, 4);
+    }
+    ul{
+        list-style-type: none;
+    }
+}
+//dixini mixini
+@mixin ivice{
+    position: fixed;
+    background-color: #f7f7f7;
+    z-index: 5;
+}
+@mixin fleks($x){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $x;
+}
+@mixin spanuj{
+    display: block;
+    height: 2px;
+    background-color: #000;
+    width: 40px;
+    margin: 20px;
+}
+//animacije
+@keyframes ulasci{
+    from{transform: scaleY(0);}
+    to{transform: scaleY(1);}
+}
+@keyframes lentry {
+    from { width: 0px;}
+    to {width: 40px;}
+}
+@keyframes entry {
+    from { height: 0px;}
+    to {height: 40px;}
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+//okolno   
+#goreIvica{
+    @include ivice;
+    height: 40px;
+    animation: entry;
+    animation-duration: 3s;
+    width: 100%;
+    top: 0;
+}
+#desnoIvica{
+    @include ivice;
+    width: 40px;
+    height: 100%;
+    animation: lentry;
+    animation-duration: 3s;
+    right: 0;
+    ul{
+        text-align: center;
+        margin-top: 45vh;
+        font-size: 100%;
+        li{
+            margin-bottom: 50%;
+        }
+    }
+}
+#doleIvica{
+    @include ivice;
+    height: 40px;
+    animation: entry;
+    animation-duration: 3s;
+    width: 100%;
+    bottom: 0;
+}
+#levoIvica{
+    @include ivice;
+    width: 40px;
+    animation: lentry;
+    animation-duration: 3s;
+    height: 100%;
+    left: 0;
+}
+//glavno
+#omotac{
+    margin: 40px;
+    position: relative;
+    z-index: 4;
+    #meni{
+        position: absolute;
+        padding: 2%;
+        text-transform: uppercase;
+        width: 100%;
+        top: 0px;
+        z-index: 3;
+        height: 100px;
+        animation: fadein;
+        animation-duration: 3s;
+        @include fleks(space-between);
+        .linkoviMenija{
+            font-size: 35px;
+        }
+    }
+    #slajder{
+        position: relative;
+        min-height: calc(100vh - 80px);
+        text-align: center;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        #naslov{
+            animation: fadein;
+            animation-duration: 3s;
+            position: absolute;
+            color: #fff;
+            top: 40%;
+            left: 35%;
+            text-transform: uppercase;
+            h2{
+                font-size: 3.5vw;
+                margin-bottom: 10%;
+            }
+            span:first-child{
+                position: absolute;
+                color: rgba(247, 247, 247,0.3);
+                font-size: 6vw;
+                margin-left: 15%;
+                margin-top: -5%;
+            }
+            span:not(:first-child){
+                margin-left: -20%;
+                border-top: 2px solid rgb(158, 4, 4);
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    #slajder > a{
+        margin-left: -3%;
+        position: absolute;
+        bottom: 2%;
+        font-size: 1vw;
+        span:first-child{
+            display: block;
+            font-size: 3vw;
+        }
+    }
+    #sadrzaj{
+        text-transform: uppercase;
+        h3{
+            margin: 20px 0px;
+        }
+        #uvod{
+            text-align: center;
+            padding: 10%;
+            img{
+                height: 100%;
+                margin-bottom:2%;
+            }
+            p{
+                font-size: 1.5vw;
+                text-transform: uppercase;
+            }
+            span{
+                @include spanuj;
+                margin-left: 50%;
+            }
+        }
+        #desavanja{
+            .desavanje{
+                span:first-child{
+                    position: absolute;
+                    color: rgba(158, 4, 4,0.5);
+                    margin-top: -1%;
+                    font-size: 3vw;
+                    z-index: -5;
+                }
+                span:not(:first-child){
+                    @include spanuj;
+                    margin: 20px;
+                }
+                .fleksuj{
+                    p:last-of-type{
+                        text-transform: initial;
+                    }
+                }
+            }
+        }
+        .desavanje,.deO,#kontaktiranje{
+            @include fleks(space-around);
+            .fleksuj{
+                width: 50%;
+                min-height: 400px;
+                h3{
+                    margin: 30px;
+                    font-size:2vw;
+                }
+                p{
+                    margin: 25px;
+                    font-size: 1vw;
+                }
+                img{
+                    width: 100%;
+                }
+                .ulogovan{
+                    padding: 5% ;
+                }
+            }
+        }
+        .desavanje:nth-of-type(even){
+            flex-direction: row-reverse;
+        }
+        .deO:first-child{
+            background-color: #f7f7f7;
+            padding: 5% 0%;
+            h3{
+                text-align: center;
+            }
+            .fleksuj{
+                img{
+                    width: 50%;
+                    margin-left: 25%;
+                }
+            }
+            p{
+                padding: 10%;
+                text-transform: initial;
+            }
+        }
+        .deO{
+            h3{
+                margin: 5% 0%;
+                font-size:2vw;
+            }
+            .deO3{
+                .fleksuj{
+                    margin-bottom: 0%;
+                    figure{
+                        height: 350px;
+                    }
+                }
+            }
+        }
+        .desavanje{
+            .fleksuj{
+                h3{
+                    margin-top: 10%;
+                }
+            }
+        }
+        figure{
+            overflow: hidden;
+            position: relative;
+            img{
+                transition: transform 2s ease-in-out;
+            }
+            &:hover img{
+                transform: scale(1.1);
+            }
+        }
+        figure >p{
+            color: rgb(158, 4, 4);
+            position: absolute;
+            top: -3%;
+            right: 3%;
+            transform: rotate(20deg);
+        }
+        #pretraga{
+            margin: 50px;
+            @include fleks(space-between);
+            input[type=text],select{
+                margin: 5% 0%;
+                width: 100%;
+                text-transform: initial;
+                height: 50px;
+                border: 0px; 
+                border-bottom: 2px solid #000;
+            }
+            select{
+                option{
+                    color: rgb(158, 4, 4);
+                }
+            }
+            #naslovKat{
+                font-size:2vw;
+            }
+        }
+        .deO3{
+            @include fleks(space-around);
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            input{
+                margin: 10px 0px;
+                padding: 10px 20px;
+            }
+            .fleksuj{
+                margin-bottom: 5%;
+                figure{
+                    img{
+                        height: 100%;
+                    }
+                }
+                width: 30%;
+                text-align: left;
+                p{
+                    margin: 20px 0px;
+                }
+                .info{
+                    margin: 20px;
+                    @include fleks(space-between);
+                }
+            }
+        }
+        #centralizovano{
+            text-align: center;
+            margin: auto 10%;
+            .fleksuj{
+                padding: 5%;
+                min-height: 250px;
+                p{
+                    padding: 0%;
+                }
+                i{
+                    font-size: 2vw;
+                }
+            }
+        }
+        #kontaktiranje{
+            @include fleks(space-around);
+            min-height: 500px;
+            text-align: center;
+            line-height: 30px;
+            padding-top: 10%;
+            input[type=button]{
+                margin-top: 5%;
+                padding: 0% 5%;
+                text-transform: initial;
+                height: 30px;
+                border: 0px;
+            }
+            textarea{
+                width: 70%;
+                border: 0px; 
+                border-bottom: 2px solid #000;
+            }
+            #forma{
+                margin-top: 50px;
+                line-height: 40px;
+                input[type=text]{
+                    margin: 5% 0%;
+                    width: 50%;
+                    text-transform: initial;
+                    height: 50px;
+                    border: 0px; 
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+    }
+    #crnMeni{
+        background-color: rgba($color: #000, $alpha: 0.95);
+        text-align: center;
+        position: fixed;
+        top: 40px;
+        bottom: 40px;
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+        h2{
+            margin: 5%;
+            a{
+                color: rgb(158, 4, 4);
+                font-size: 2vmax;
+            }
+        }
+        ul{
+            margin: 15% 10%;
+            @include fleks(space-around);
+            li{
+                span{
+                        visibility: hidden;
+                        font-size: 4vmax;
+                        position: absolute;
+                        margin: -1.5% 0% 0% 2%;
+                        color: #aaa;
+                        z-index: -5;
+                }
+                &:hover{
+                    span{
+                        visibility: visible;
+                        animation: fadein 0.5s;
+                    }                 
+                }
+            }
+            a{
+                color: rgb(158, 4, 4);
+                font-size: 2vmax;
+            }
+        }
+    } 
+}
+//dodaci
+#modal,#listaFiltera,#autor{
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    #modal-sadrzaj,#listaFiltera-sadrzaj,#autor-sadrzaj{
+        text-align: center;
+        background-color: rgba(254, 254, 254,0.1);
+        border: 1px solid #888;
+        width: 100%;
+        height: 100%; 
+        #listaKategorija{
+            margin-top: 5%;
+            font-size: 1.5vw;
+            li{
+                height: 100%;
+                padding: 2% 0%;
+                &:hover{
+                    background-color: rgba(254, 254, 254,0.5);
+                }
+            }
+        }
+        p{
+            margin-top: 20%;
+            font-size: 45px;
+        }
+    }
+    #zatvori,#zatvoriFilter,#zatvoriAutora{
+        color: rgb(158, 4, 4);
+        float: right;
+        font-size: 40px;
+        font-weight: bold;
+        margin-right: 10%;
+        margin-top: 2%;
+        &:hover,&:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+    }
+}
+#autor{
+    background-color: rgba(0,0,0,0.95);
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: auto;
+    height: auto;
+    #autor-sadrzaj{
+        p{
+            font-size: 100% !important;
+            margin: 30% 10% 0% 10%;
+            color: #aaa;
+            background-color: rgba(0,0,0,0.75);
+            padding: 2%;
+        }
+        img{
+            width: 40%;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            z-index: -2;
+        }
+    }
+}
+.fiksiranFuter,.fiksiranMeni{
+    @include fleks(space-around);
+    @include ivice;
+    animation: ulasci;
+    animation-duration: 1s;
+    width: 100%;
+    height: 40px;
+    z-index: 7;
+    
+    #drustvene-mreze{
+        width: 10%;
+        padding-top: 5px;
+        ul{
+            @include fleks(space-around);
+        }
+    }
+}  
+.fiksiranMeni{
+    top: 0;
+}
+.fiksiranFuter{
+    bottom: 0;
+    padding-top: 5px;
+}
+//ostale sitnice
+.sakriven{
+    display: none;
+}
+#dobrodoslica{
+    font-size: 100%;
+}
+//responsive
+@media(max-width:1300px){
+    #uvod{
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 1.5vh !important;
+        }
+    }
+    #kontaktiranje{
+        .fleksuj{
+            margin-top: 5% !important; 
+        }
+        .ulogovan{
+            font-size: 1.5vw !important;
+        }
+    }
+    #autor{
+        #autor-sadrzaj{
+            img{
+                width: 50% !important;
+                left: 25% !important;
+            }
+            p{
+                margin: 5% !important;
+                margin-top: 50% !important;
+                font-size: 90% !important;
+            }
+        }
+    }
+    .desavanje{     
+        .fleksuj{
+            min-height: 200px !important;
+            img{
+                margin-top: 5% !important;
+            }
+            p{
+                font-size: 1.3vmin !important;
+            }
+        }
+    }
+    #listaKategorija{
+        margin-top: 15% !important; 
+    }
+}
+@media(max-width:800px){
+    #centralizovano{
+        margin: 5% !important;
+    }
+    #drustvene-mreze{
+        width: 20% !important;
+    }
+    #listaKategorija{
+        margin-top: 25% !important;
+        font-size: 2vh !important;
+    }
+    #autor{
+        #autor-sadrzaj{
+            img{
+                width: 100% !important;
+                left: 0% !important;
+            }
+            p{
+                margin: 0% !important;
+                margin-top: 100% !important;
+                font-size: 80% !important;
+            }
+        }
+    }
+    .desavanje,.deO3,.deO,#kontaktiranje{
+        .fleksuj{
+            width: 100% !important;
+            min-height: 200px !important;
+            margin-bottom: 5%;
+            figure{
+                margin: 0% auto !important;
+                width: 80% !important;
+            }
+            .info{
+                justify-content: space-around !important;
+            }
+            h3{
+                margin: 2% !important;
+            }
+            p{
+                font-size: 1em !important;
+            }
+            img{
+                min-height: 200px;
+            }
+        }
+    }
+    #kontaktiranje{
+        .fleksuj{
+            margin-top: 15% !important; 
+        }
+        .ulogovan{
+            font-size: 1.5vh !important;
+            margin: 10% 0% !important;
+        }
+    }
+    #desavanja{
+        .desavanje{
+            span:first-child{
+                position: absolute;
+                color: rgba(158, 4, 4,0.5);
+                margin-top: -2% !important;
+                margin-left: 0% !important;
+                font-size: 2.5vh !important;
+                z-index: -5;
+            }
+            .fleksuj{
+                h3{
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+    .desavanje{
+        .fleksuj{
+            h3{
+                font-size: 2vh !important;
+            }
+            span{
+                width: 30% !important;
+            }
+            p{
+                font-size: 1.5vh !important;
+            }
+        }
+    }
+    #slajder > a{
+        font-size: 1vh !important;
+        span:first-child{
+            font-size: 2vh !important;
+        }
+    }
+    
+    #crnMeni{
+        a{       
+            font-size: 3vh !important;
+        }
+        ul{
+            li{
+                display: block !important;
+                width: 100% !important;
+                margin: 10% auto;
+                span{
+                    margin: -1.5% 10% !important;
+                }
+            }
+        }
+    }
+    .fiksiranMeni{
+        h1{
+            font-size: 2vh !important;
+        }
+    }
+    #pretraga{
+        #pretrazivanje,#naslovKat,#sortiranje{
+            text-align: center;
+            width: 100%;
+            input,select{
+                width: 100%;
+            }
+            margin: 1% auto;
+        }
+        #naslovKat{
+            order: 1;
+            font-size:2vh !important;
+        }
+    }
+    #slajder{
+        background-position: center center !important;
+        height: 50vh !important;
+    }
+}
+@media(max-width:600px){
+    @keyframes lentry {
+        from { width: 0px;}
+        to {width: 10px;}
+    }
+    @keyframes entry {
+        from { height: 0px;}
+        to {height: 10px;}
+    }
+    #omotac{
+        margin: 10px;
+        overflow: hidden;
+        #uvod {
+            p{
+             font-size: 100% !important;
+            }
+            span{
+                width: 10% !important;
+            }
+        }
+        #slajder{
+            min-height: calc(100vh - 20px) !important;
+            #naslov{
+                left: 15% !important;
+                h2{
+                    font-size: 200% !important;
+                    span{
+                        font-size: 150% !important;
+                    }
+                }
+            }
+        }
+        #slajder > a{
+            margin-left: -15% !important;
+            font-size: 100% !important;
+            i{
+                font-size: 150% !important;
+            }
+        }
+        #desavanja{
+            .desavanje{
+                .fleksuj{
+                    h3{
+                        font-size: 150% !important;
+                        span{
+                            margin-top: -5% !important;
+                            margin-left: 5% !important;
+                            font-size: 200% !important;
+                        }
+                    }
+                    p{
+                        font-size: 100% !important;
+                    }
+                    figure{
+                        width:100% !important;
+                    }
+                }
+            }
+        }
+    }
+    #modal-sadrzaj p{
+        margin-top: 50% !important;
+    }
+    .nemaGa{
+        display: none !important;
+    }
+    .linkoviMenija{
+        display: block;
+        font-size: 150% !important;
+    }
+    #logo{
+        font-size: 80% !important;
+    }
+    #dobrodoslica{
+        display: none;
+    }
+    .fiksiranFuter{
+        display: none;
+    }
+    .fiksiranMeni{
+        justify-content: space-between;
+        padding: 0% 5%;
+        h1{
+            font-size: 150% !important;
+            margin-top: 2% !important;
+        }
+    }
+    .deO{
+        h3{
+            font-size: 150% !important;
+            margin: 30% 0% !important;
+        }
+        .deO3{
+            .fleksuj{
+                text-align: center !important;
+            }
+        }
+        i{
+            font-size: 150% !important;
+        }
+    }
+    #goreIvica,#doleIvica{
+        height: 10px;
+    }
+    #listaKategorija{
+        font-size: 150% !important;
+    }
+    #crnMeni{
+        top: 0px !important;
+        padding-top: 40px !important;
+        ul{
+            li{
+                span{
+                    margin-left: 7% !important;
+                }
+            }
+        }
+    }
+    #desnoIvica,#levoIvica{
+        width: 10px;
+        ul{
+            display: none;
+        }
+    }
+    .fiksiranMeni,.fiksiranFuter{
+        text-align: center;
+    }
+    #drustvene-mreze, #izlogovanje + p{
+        display: none;
+    }
+    #pretraga + div{
+        .fleksuj{
+            text-align: center !important;
+        }
+    }
+    #forma{
+        line-height: 60px !important;
+    }
+    input[type="text"]{
+        width: 100% !important; 
+    }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Spank",
+        "role": "Dancer",
+        "description": "Don’t believe the hype about them. I’m really funny.",
+        "slika":{
+            "src":"boy1.jpg",
+            "alt":"Spank guy"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Joey",
+        "role": "Writer",
+        "description": "Father/Comedian/Writer/Actor…uh, that would just about sum it up!",
+        "slika":{
+            "src":"boy2.jpg",
+            "alt":"Joey guy"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Na'im",
+        "role": "Bff",
+        "description": "Na’im the Star. Comedian/Actor. Y’all got next; I got now. I’m the one.",
+        "slika":{
+            "src":"boy3.jpg",
+            "alt":"BFF guy"
+        }
+    }
+]
